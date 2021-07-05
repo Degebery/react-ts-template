@@ -1,7 +1,5 @@
 import React from 'react';
 
-export default function MainPage (props) {
-  return (
-    <div>Login</div>
-  )
+export default function MainPage(props) {
+  return <div>Login</div>;
 }

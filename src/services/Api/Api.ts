@@ -9,7 +9,7 @@ class API implements IAPI {
   private readonly http: AxiosInstance;
   private readonly emitter: EventEmitter;
 
-  constructor (baseURL: string) {
+  constructor(baseURL: string) {
     this.http = axios.create({
       baseURL,
       timeout: 120000,
@@ -20,18 +20,15 @@ class API implements IAPI {
     this.emitter = new EventEmitter();
   }
 
-  private unauthorizedErrorHandler (error: AxiosError) {
-    if (
-      error.response &&
-      error.response.status === 401
-    ) {
+  private unauthorizedErrorHandler(error: AxiosError) {
+    if (error.response && error.response.status === 401) {
       this.emitter.emit('unauthorized', error);
     }
 
-    return Promise.reject(error)
+    return Promise.reject(error);
   }
 
-  public callMethod (name: string, body?: IMethodPayload, params?: IMethodPayload) {
+  public callMethod(name: string, body?: IMethodPayload, params?: IMethodPayload) {
     const method = methods[name];
 
     if (!method) {
