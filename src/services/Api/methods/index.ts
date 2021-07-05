@@ -1,6 +1,4 @@
 import * as auth from './auth';
-import mapMethods from './mapMethods';
+import loadMethods from './loadMethods';
 
-export default {
-  ...mapMethods('auth', auth),
-};
+export default loadMethods({ auth });
