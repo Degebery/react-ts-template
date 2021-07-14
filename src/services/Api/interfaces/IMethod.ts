@@ -1,6 +1,6 @@
-import { AxiosInstance } from 'axios';
+import { AxiosInstance, AxiosResponse } from 'axios';
 import IMethodPayload from './IMethodPayload';
 
 export default interface IMethod {
-  (http: AxiosInstance, body?: IMethodPayload, params?: IMethodPayload): Promise<never>;
+  (http: AxiosInstance, data?: IMethodPayload): Promise<AxiosResponse<any>>;
 }

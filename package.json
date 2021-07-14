@@ -2,6 +2,7 @@
   "name": "react-ts-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9999/",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.4",
@@ -13,6 +14,8 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
+    "mobx": "^6.3.2",
+    "mobx-react-lite": "^3.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
