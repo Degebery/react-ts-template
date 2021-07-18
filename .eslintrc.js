@@ -155,6 +155,7 @@ module.exports = {
     ],
     'no-prototype-builtins': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-named-as-default ': 0,
     // "import/no-default-export": "error",
     'import/no-extraneous-dependencies': 'off',
   },

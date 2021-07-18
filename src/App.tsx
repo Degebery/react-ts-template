@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
+import { observer } from 'mobx-react-lite';
+import { ChakraProvider } from '@chakra-ui/react';
+import Router from './Router';
+import theme from './themes/theme';
 
-function App() {
-  return <div className="App" />;
-}
-
-export default App;
+export default observer(() => (
+  <ChakraProvider theme={theme}>
+    <Router />
+  </ChakraProvider>
+));
